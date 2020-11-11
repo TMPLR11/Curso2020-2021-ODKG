@@ -1,0 +1,41 @@
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:<http://www.w3.org/2001/XMLSchema#> .
+@prefix :<http://exercise.publicprocurement.es/about/ontology/group04pp#> .
+
+
+<http://exercise.publicprocurement.es/about/ontology/group04pp> a owl:Ontology ;
+    owl:imports <http://exercise.publicprocurement.es/about/ontology/group04pp>  .
+
+
+:Technology_Integration_Group a :Supplier;
+	:hasLatitude "38.580427"^^geo:lat;
+	:hasLongigute "-121.494396"^^geo:long;
+	:hasZIPCode "95814"^^xsd:string;
+	:hasSupplierCode "1087660"^^xsd:long.
+	
+	
+
+
+:HP_35A_BLACK_TONER a :Item;
+	:hasDescription "HP 35A BLACK TONER"^^xsd:string;
+	:hasUNSPSC "44103127"^^xsd:long.
+ 
+
+:Dept_of_Consumer_Affairs a :Department.
+
+
+:REQ0013911 a :Purchase;
+	:hasUnitPrice "45.40"^^owl:real;
+	:hasTotalPrice "1362"^^owl:real;
+	:hasQuantity "30"^^xsd:long;
+	:hasItem :HP_35A_BLACK_TONER;
+	:madeBy :Dept_Of_Consumer_Affairs;
+	:hasAcquisitionType "NON-IT_GOODS"^^xsd:string;
+	:hasSubAcquisitionType "Personal_Services"^^xsd:string;
+	:hasAcquisitionMethod "Statewide_Contract"^^xsd:string;
+	:hasSubAcquisitionMethod "OCB"^^xsd:string;
+	:hasSupplier :Technology_Integration_Group;
+	:hasCreationDate "2014-10-10T00:00:00Z"^^xsd:dateTime;
+	:hasFiscalYear "2014-2015"^^xsd:string.	
